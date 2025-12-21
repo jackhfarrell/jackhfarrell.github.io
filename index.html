@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Farrell | Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/00cc8e5e28.js" crossorigin="anonymous"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Recursive:wght@300..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <!-- resposive navigation bar -->
+    <nav class="topnav" id="topNav">
+        <a href = "index.html" class="title">Jack Farrell</a>
+        <a href="index.html" class="active"> <i class="fa-solid fa-home"></i> home</a> 
+        <a href="research.html"><i class="fa-solid fa-book"></i> research</a>
+        <a href="film"><i class="fa-solid fa-video"></i> film</a>
+        <a class="final-link" href="misc"><i class="fa-solid fa-folder"></i> misc</a>
+
+        <!-- mobile menu button -->
+        <a href="javascript:void(0);" class="icon" onclick="menuButton()">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </nav>
+    <header>
+        <h1>Welcome!</h1>
+    <main>
+        
+        <div class="flex-container">
+           
+           
+            <div class = "homepage-bio">
+                <p>My name is Jack Hollis Farrell, and I am a Ph.D. student in physics at the University of Colorado at Boulder. I obtained a BSc. in physics from the University of Toronto in 2021.  I was born in Halifax, Nova Scotia.  </p>
+                <p>My <a href="#research">research</a> focuses on Condensed Matter Physics, the theoretical physics of materials; this wide field includes some of the theory behind Quantum Computers, Superconductors, and more. A complete (and short!) list of my research works can be found on Google Scholar.</p>
+                <p>My amateur <a href="#film">filmmaking</a> has involved short-form science communication pieces and a long-form research documentary.</p>
+                <p>My <a href="#misc">miscellaneous</a> interests include comic books, movies, baseball, guitar, board games, comedy, and more.</p>
+            </div>
+
+            <div class = "pic-container">
+                <img class = "profile-pic" src="assets/me-square_blur.png" alt="Jack Farrell">
+                <ul class="socials"> 
+                    <li><script language="javascript">
+                        <!--
+                        var thing1 = "jack.farrell";
+                        var thing2 = "colorado.edu";
+                        document.write('<a href="mai' + 'lto:' + thing1 + '@' + thing2 + '">' + "<i class='fa fa-envelope'></i> " + thing1 + '@' + thing2  + '</a>');
+                        -->
+                        </script></li>
+                    <li><a href="" target="_blank"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a></li>
+                    <li><a href="" target="_blank"><i class="fa-solid fa-paperclip"></i> CV</a></li>
+                    <li><a href="" target="_blank"><i class="fa-brands fa-bluesky"></i> Bluesky</a></li>
+                    <li><a href="" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                    </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>
