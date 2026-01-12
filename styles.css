@@ -1,5 +1,58 @@
+/* Tasteful frame for embedded videos */
+.talk-video iframe {
+  border-left: 1px solid var(--blue);
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0 8px 8px 0;
+  background: #222;
+  box-shadow: 0 2px 12px rgba(135,213,248,0.08);
+  max-width: 100%;
+  height: auto;
+}
+/* More space between talk bullet points */
+.talk-list li {
+  margin-bottom: 32px;
+}
+.talk-list ul {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.talk-list ul li {
+  margin-bottom: 4px;
+}
+
+.talk-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.talk-citation {
+  flex: 1;
+}
+.talk-video {
+  flex-shrink: 0;
+}
+@media (max-width: 700px) {
+  .talk-flex {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+/* Talks section layout */
+.talks-section h2 {
+  font-size: 18pt;
+  margin-bottom: 32px;
+  text-align: left;
+}
+/* Course instructors style (like research authors) */
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
 }
 
 body {
@@ -20,7 +73,6 @@ body {
 .topnav {
     /*background-color: #333;*/
     overflow: hidden;
-    border-bottom: 0.5px solid white;
     display: flex;   
     justify-content: flex-end; 
   }
@@ -36,8 +88,8 @@ body {
 .topnav a {
   display: inline-block;
   color: #f2f2f2;
-  padding-left:10px;
-  padding-right:10px;
+  padding-left:18px;
+  padding-right:18px;
   text-decoration: None;
   height:50px;
   line-height: 50px
@@ -80,52 +132,79 @@ body {
   h1 {
     text-align:center;
     font-size: 24pt;
-  
     padding-top:20px;
   }
 
-.flex-container {
+  h2 {
+    font-size: 18pt;
+    margin-bottom: 8px;
+    margin-top: 16px;
+  }
+
+/* Homepage layout */
+.page-container {
     display: flex;
     flex-direction: row;
-    gap: 64px;
-    align-items:top;
+    gap: 24px;
+    margin-top: 32px;
 }
 
-
-.pic-container {
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
-  padding-top:0px;
+.sidebar {
+    flex-shrink: 0;
+  width: 220px;
 }
 
-.profile-pic{
-  border-radius: 5px;
-  max-width:260px;
-  width: 100%;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:5px;;
+.sidebar h2 {
+    font-size: 18pt;
+    margin-top: 16px;
+    margin-bottom: 4px;
 }
 
-
-.socials {
-  list-style-type: none;
-  padding-left:0px;
-  display: inline-block;
-  margin-left: auto;
-  margin-right:auto;
+.sidebar .tagline {
+    color: #cfcfcf;
+    font-size: 11pt;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    text-align: left;
 }
 
-.pic-container img {
+.profile-pic {
+  border-radius: 50%;
+  width: 120px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   display: block;
-  border-radius: 5px;
-  height: auto;
-  margin-left:auto;
-  margin-right:auto;
+  margin: 0 auto 28px auto;
+  transform: scale(1.25);
+  transform-origin: center;
+}
+
+.contact-section {
+    margin-top: 8px;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 8px;
+}
+
+.contact-list li {
+    margin-bottom: 6px;
+    font-size: 11pt;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-list li i {
+    width: 18px;
+    text-align: center;
+    color: var(--blue);
+}
+
+.main-content {
+    flex: 1;
 }
 
 
@@ -139,8 +218,20 @@ body {
     text-decoration: underline;
   }
 
-     /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
+  .placeholder-link {
+    color: #cfcfcf;
+    cursor: default;
+    pointer-events: none;
+    text-decoration: none;
+  }
+
+  .placeholder-link:hover {
+    color: #cfcfcf;
+    text-decoration: none;
+  }
+
+     /* When the screen is less than 768 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 768px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -148,14 +239,230 @@ body {
   }
 }
 
-.homepage-bio{
-  padding-top: 0px;
-  margin-top: 0px;
+/* Mobile layout for homepage */
+@media screen and (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .sidebar h2 {
+    text-align: center;
+  }
+  
+  .sidebar .tagline {
+    text-align: center;
+  }
+  
+  .profile-pic {
+    width: 110px;
+    margin-bottom: 16px;
+  }
+  
+  .contact-list {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .main-content {
+    max-width: 100%;
+  }
 }
 
 
+
+.content-section {
+  margin-top: 28px;
+}
+
+.section-intro {
+  margin-bottom: 12px;
+}
+
+.content-section ul {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.content-section li {
+  margin-bottom: 10px;
+}
+
+.item-title {
+  font-weight: 600;
+}
+
+.item-meta {
+  display: block;
+  color: #cfcfcf;
+  font-size: 10pt;
+}
+
+/* Research projects layout */
+.projects-section {
+  margin-top: 32px;
+}
+
+.project-card {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 48px;
+  align-items: flex-start;
+}
+
+.project-image {
+  flex-shrink: 0;
+  width: 220px;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 5px;
+  display: block;
+}
+
+.project-content {
+  flex: 1;
+}
+
+.project-content h2 {
+  margin-top: 0;
+  font-size: 18pt;
+}
+
+.project-authors {
+  color: #cfcfcf;
+  font-size: 11pt;
+  margin-bottom: 8px;
+  margin-top: 4px;
+}
+
+.project-content p {
+  margin-bottom: 12px;
+}
+
+.project-meta {
+  margin-top: 16px;
+  display: flex;
+  gap: 20px;
+}
+
+.project-meta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11pt;
+}
+
+.project-meta i {
+  color: var(--blue);
+}
+
+/* Courses section layout */
+.courses-section {
+  margin-top: 32px;
+}
+
+.courses-section h2 {
+  font-size: 18pt;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #444;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.course-card {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 48px;
+  align-items: flex-start;
+}
+
+.course-image {
+  flex-shrink: 0;
+  width: 220px;
+}
+
+.course-image img {
+  width: 100%;
+  border-radius: 5px;
+  display: block;
+}
+
+.course-content {
+  flex: 1;
+}
+
+.course-content h2 {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 18pt;
+}
+
+.course-content h2 a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.course-content h2 a:hover {
+  text-decoration: underline;
+  color: var(--white);
+}
+
+.course-role {
+  color: #cfcfcf;
+  font-size: 11pt;
+  margin-bottom: 8px;
+  margin-top: 4px;
+}
+
+.course-content p {
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .course-card {
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+  
+  .course-image {
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-card {
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+  
+  .project-image {
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .topnav.responsive {
       position: relative;
       display: block;

@@ -17,51 +17,48 @@
 <body>
     <!-- resposive navigation bar -->
     <nav class="topnav" id="topNav">
-        <a href = "index.html" class="title">Jack Farrell</a>
-        <a href="index.html" class="active"> <i class="fa-solid fa-home"></i> home</a> 
-        <a href="research.html"><i class="fa-solid fa-book"></i> research</a>
-        <a href="film"><i class="fa-solid fa-video"></i> film</a>
-        <a class="final-link" href="misc"><i class="fa-solid fa-folder"></i> misc</a>
+        <a href="index.html" class="title">Jack Farrell's Personal Website</a>
+        <a href="index.html" class="active"> <i class="fa-solid fa-home fa-fw"></i> home</a> 
+        <a href="research.html"><i class="fa-solid fa-book fa-fw"></i> research</a>
+        <a href="teaching.html"><i class="fa-solid fa-graduation-cap fa-fw"></i> teaching</a>
+        <a class="final-link" href="talks.html"><i class="fa-solid fa-microphone fa-fw"></i> talks</a>
 
         <!-- mobile menu button -->
         <a href="javascript:void(0);" class="icon" onclick="menuButton()">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars fa-fw"></i>
         </a>
     </nav>
     <header>
         <h1>Welcome!</h1>
+    </header>
     <main>
-        
-        <div class="flex-container">
-           
-           
-            <div class = "homepage-bio">
-                <p>My name is Jack Hollis Farrell, and I am a Ph.D. student in physics at the University of Colorado at Boulder. I obtained a BSc. in physics from the University of Toronto in 2021.  I was born in Halifax, Nova Scotia.  </p>
-                <p>My <a href="#research">research</a> focuses on Condensed Matter Physics, the theoretical physics of materials; this wide field includes some of the theory behind Quantum Computers, Superconductors, and more. A complete (and short!) list of my research works can be found on Google Scholar.</p>
-                <p>My amateur <a href="#film">filmmaking</a> has involved short-form science communication pieces and a long-form research documentary.</p>
-                <p>My <a href="#misc">miscellaneous</a> interests include comic books, movies, baseball, guitar, board games, comedy, and more.</p>
-            </div>
-
-            <div class = "pic-container">
-                <img class = "profile-pic" src="assets/me-square_blur.png" alt="Jack Farrell">
-                <ul class="socials"> 
-                    <li><script language="javascript">
-                        <!--
-                        var thing1 = "jack.farrell";
-                        var thing2 = "colorado.edu";
-                        document.write('<a href="mai' + 'lto:' + thing1 + '@' + thing2 + '">' + "<i class='fa fa-envelope'></i> " + thing1 + '@' + thing2  + '</a>');
-                        -->
-                        </script></li>
-                    <li><a href="" target="_blank"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a></li>
-                    <li><a href="" target="_blank"><i class="fa-solid fa-paperclip"></i> CV</a></li>
-                    <li><a href="" target="_blank"><i class="fa-brands fa-bluesky"></i> Bluesky</a></li>
-                    <li><a href="" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+        <div class="page-container">
+            <aside class="sidebar">
+                <img class="profile-pic" src="assets/me-square_blur.png" alt="Jack Farrell">
+                <h2>Jack Farrell</h2>
+                <p class="tagline">condensed matter theory</p>
+                
+                <div class="contact-section">
+                    <ul class="contact-list"> 
+                        <li><script language="javascript">
+                            var thing1 = "jack.farrell";
+                            var thing2 = "colorado.edu";
+                            document.write('<a href="mai' + 'lto:' + thing1 + '@' + thing2 + '">' + "<i class='fa fa-envelope'></i> " + thing1 + '@' + thing2  + '</a>');
+                            </script></li>
+                        <li><a href="https://scholar.google.com/citations?user=zMQlo38AAAAJ&hl=en&inst=12445218673517910016" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-scholar fa-fw"></i> Google Scholar</a></li>
+                        <li><a href="assets/cv.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf fa-fw"></i> CV</a></li>
+                        <li><a href="https://bsky.app/profile/jackhfarrell.bsky.social" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bluesky fa-fw"></i> Bluesky</a></li>
+                        <li><a href="https://github.com/jackhfarrell" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-fw"></i> GitHub</a></li>
                     </ul>
+                </div>
+            </aside>
+            
+            <div class="main-content">
+                <p>Hello and welcome to my website! I am currently a Ph.D. student in physics at the University of Colorado at Boulder working with <a href="https://www.alucasphys.com/">Andy Lucas</a>. I obtained a BSc. in physics from the University of Toronto in 2021, and I was born in Halifax, Nova Scotia.</p>
+                
+                <p>I am a theoretical condensed matter physicist.  In particular, my <a href="research.html">research</a> interest is the long-wavelength modelling of quantum materials through hydrodynamics and quantum field theory.</p>
             </div>
         </div>
     </main>
-
-    <footer>
-    </footer>
 </body>
 </html>
