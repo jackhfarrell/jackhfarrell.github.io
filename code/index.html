@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Farrell | Code</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://kit.fontawesome.com/00cc8e5e28.js" crossorigin="anonymous"></script>
+    <script src="/script.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Recursive:wght@300..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <!-- resposive navigation bar -->
+    <nav class="topnav" id="topNav">
+        <a href="/" class="title">Jack Farrell's Personal Website</a>
+        <a href="/"><i class="fa-solid fa-home fa-fw"></i> home</a> 
+        <a href="/research/"><i class="fa-solid fa-book fa-fw"></i> research</a>
+        <a href="/teaching/"><i class="fa-solid fa-graduation-cap fa-fw"></i> teaching</a>
+        <a href="/code/" class="active"><i class="fa-solid fa-code fa-fw"></i> code</a>
+        <a class="final-link" href="/talks/"><i class="fa-solid fa-microphone fa-fw"></i> talks</a>
+        <a href="javascript:void(0);" class="icon" onclick="menuButton()">
+            <i class="fa-solid fa-bars fa-fw"></i>
+        </a>
+    </nav>
+    <header>
+        <h1>Code</h1>
+    </header>
+    <main>
+        <section class="content-section">
+        </section>
+        <section class="projects-section">
+            <!-- FermiHarmonics -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="/code/hydrodynamic_streamlines.png" alt="FermiHarmonics hydrodynamic streamlines">
+                </div>
+                <div class="project-content">
+                    <h2>FermiHarmonics</h2>
+                    <p>Linearized 2D Fermi-liquid Boltzmann transport on unstructured meshes.</p>
+                    <p>FermiHarmonics is a Julia code for solving a toy linearized 2D Boltzmann equation for Fermi-liquid transport, including momentum-relaxing and momentum-conserving collisions, on unstructured meshes. It is mostly a lightweight wrapper for Trixi.jl, which is a library for high-order PDE solutions using Discontinous Galerkin Spectral Element Method (DGSEM).</p>
+                    <p class="project-meta">
+                        <a href="https://github.com/jackhfarrell/FermiHarmonics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-fw"></i> GitHub Repository</a>
+                        <a href="https://fermiharmonics.jackhfarrell.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-book fa-fw"></i> Documentation</a>
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
