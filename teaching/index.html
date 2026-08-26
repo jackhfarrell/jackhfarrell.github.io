@@ -9,26 +9,25 @@
     <link rel="canonical" href="https://jackhfarrell.com/teaching/">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/styles.css">
-    <script src="https://kit.fontawesome.com/00cc8e5e28.js" crossorigin="anonymous"></script>
-    <script src="/script.js" type="text/javascript"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Recursive:wght@300..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://kit.fontawesome.com/00cc8e5e28.js" crossorigin="anonymous" defer></script>
+    <script src="/script.js" defer></script>
 </head>
 
 
 <body>
-    <!-- resposive navigation bar -->
-    <nav class="topnav" id="topNav">
+    <nav class="topnav" id="primary-navigation" aria-label="Primary">
         <a href="/" class="title">Jack Farrell's Personal Website</a>
-        <a href="/"><i class="fa-solid fa-home fa-fw"></i> home</a> 
+        <a href="/"><i class="fa-solid fa-home fa-fw"></i> home</a>
         <a href="/research/"><i class="fa-solid fa-book fa-fw"></i> research</a>
-        <a href="/teaching/" class="active"><i class="fa-solid fa-graduation-cap fa-fw"></i> teaching</a>
+        <a href="/teaching/" class="active" aria-current="page"><i class="fa-solid fa-graduation-cap fa-fw"></i> teaching</a>
         <a class="final-link" href="/talks/"><i class="fa-solid fa-microphone fa-fw"></i> talks</a>
-        <a href="javascript:void(0);" class="icon" onclick="menuButton()">
+        <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars fa-fw"></i>
-        </a>
+        </button>
     </nav>
     <header>
         <h1>Teaching</h1>
@@ -37,14 +36,14 @@
         <section>
             <h2>Instructor</h2>
             <hr class="section-divider">
-            
+
             <div class="course-card">
                 <div class="course-image">
                     <img src="/teaching/interferometry_project.png" alt="PHYS1400">
                 </div>
                 <div class="course-content">
                     <h2>PHYS1400: Fundamentals of Scientific Inquiry</h2>
-                    <p class="project-authors" style="margin-bottom: -8px;">University of Colorado, Boulder</p>
+                    <p class="project-authors course-institution">University of Colorado, Boulder</p>
                     <p class="project-authors"><em>Instructors:</em> <strong>Jack Farrell</strong>, Maggie Huber</p>
                     <p>
                         PHYS1400 is an elective course for freshmen undergraduates aimed at introducing students to skills in scientific inquiry such as programming in Python, typesetting reports in LaTeX, carrying out literature review, and more: skills that are not often explicitly taught in physics courses. In Spring 2024, I co-developed and co-taught this course with Maggie Huber, a fellow graduate student. Throughout the semester, the students completed group projects and delivered poster presentations about their work.  Lecture slides and student posters are available at the link below.
@@ -53,8 +52,8 @@
                 </div>
             </div>
         </section>
-        
-        <section style="margin-top: 64px;">
+
+        <section class="teaching-assistant-section">
             <h2>Teaching Assistant</h2>
             <hr class="section-divider">
             <ul>

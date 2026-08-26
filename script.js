@@ -1,9 +1,7 @@
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function menuButton() {
-    var x = document.getElementById("topNav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  } 
+const navigation = document.querySelector(".topnav");
+const navigationToggle = navigation?.querySelector(".nav-toggle");
+
+navigationToggle?.addEventListener("click", () => {
+  const isOpen = navigation.classList.toggle("is-open");
+  navigationToggle.setAttribute("aria-expanded", isOpen);
+});

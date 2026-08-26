@@ -9,33 +9,30 @@
     <link rel="canonical" href="https://jackhfarrell.com/research/">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/styles.css">
-    <script src="https://kit.fontawesome.com/00cc8e5e28.js" crossorigin="anonymous"></script>
-    <script src="/script.js" type="text/javascript"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Recursive:wght@300..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://kit.fontawesome.com/00cc8e5e28.js" crossorigin="anonymous" defer></script>
+    <script src="/script.js" defer></script>
 </head>
 
 
 <body>
-    <!-- resposive navigation bar -->
-    <nav class="topnav" id="topNav">
+    <nav class="topnav" id="primary-navigation" aria-label="Primary">
         <a href="/" class="title">Jack Farrell's Personal Website</a>
-        <a href="/"><i class="fa-solid fa-home fa-fw"></i> home</a> 
-        <a href="/research/" class="active"><i class="fa-solid fa-book fa-fw"></i> research</a>
+        <a href="/"><i class="fa-solid fa-home fa-fw"></i> home</a>
+        <a href="/research/" class="active" aria-current="page"><i class="fa-solid fa-book fa-fw"></i> research</a>
         <a href="/teaching/"><i class="fa-solid fa-graduation-cap fa-fw"></i> teaching</a>
         <a class="final-link" href="/talks/"><i class="fa-solid fa-microphone fa-fw"></i> talks</a>
-        <a href="javascript:void(0);" class="icon" onclick="menuButton()">
+        <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars fa-fw"></i>
-        </a>
+        </button>
     </nav>
     <header>
         <h1>Research</h1>
     </header>
     <main>
-        <section class="content-section">
-        </section>
         <section class="projects-section">
             <!-- Characterizing Electronic Scattering Rates -->
             <article class="project-card">
@@ -54,8 +51,8 @@
 
             <!-- Cryogenic Shock Exfoliation -->
             <article class="project-card">
-                <div class="project-image">
-                    <img src="/papers/cryogenic-shock-exfoliation/rhombohedral.png" alt="Rhombohedral graphite nanoelectronic device" style="width: 70%; display: block; margin: 0 auto;">
+                <div class="project-image project-image--70">
+                    <img src="/papers/cryogenic-shock-exfoliation/rhombohedral.png" alt="Rhombohedral graphite nanoelectronic device">
                 </div>
                 <div class="project-content">
                     <h2>Cryogenic Shock Exfoliation for Ultrahigh Mobility Rhombohedral Graphite Nanoelectronics</h2>
@@ -96,11 +93,11 @@
                     </p>
                 </div>
             </article>
-            
+
             <!-- Nonequilibrium Time Reversal -->
             <article class="project-card">
-                <div class="project-image">
-                    <img src="/papers/nonequilibrium-time-reversal/nonrecip_dark.png" alt="Generalized time-reversal symmetry" style="width: 75%; display: block; margin: 0 auto;">
+                <div class="project-image project-image--75">
+                    <img src="/papers/nonequilibrium-time-reversal/nonrecip_dark.png" alt="Generalized time-reversal symmetry">
                 </div>
                 <div class="project-content">
                     <h2>Generalized Time-Reversal Symmetry and Effective Theories for Nonequilibrium Matter</h2>
@@ -111,11 +108,11 @@
                     </p>
                 </div>
             </article>
-            
+
             <!-- Helical Hydrodynamics -->
             <article class="project-card">
-                <div class="project-image">
-                    <img src="/papers/helical-hydrodynamics/helix_dark_simple.png" alt="Hydrodynamics with helical symmetry" style="width: 75%; display: block; margin: 0 auto;">
+                <div class="project-image project-image--75">
+                    <img src="/papers/helical-hydrodynamics/helix_dark_simple.png" alt="Hydrodynamics with helical symmetry">
                 </div>
                 <div class="project-content">
                     <h2>Hydrodynamics with Helical Symmetry</h2>
@@ -126,14 +123,14 @@
                     </p>
                 </div>
             </article>
-            
+
             <!-- Corbino Dyakonov-Shur -->
             <article class="project-card">
                 <div class="project-image">
                     <img src="/papers/corbino-dyakonov-shur/corbino_dark.png" alt="Terahertz Radiation from the Dyakonov-Shur Instability">
                 </div>
                 <div class="project-content">
-                    <h3>Terahertz Radiation from the Dyakonov-Shur Instability of Hydrodynamic Electrons in a Corbino Geometry</h3>
+                    <h2>Terahertz Radiation from the Dyakonov-Shur Instability of Hydrodynamic Electrons in a Corbino Geometry</h2>
                     <p class="project-authors"><strong>Jack H. Farrell</strong>, Nicolas Grisouard, Thomas Scaffidi</p>
                     <p>Hydrodynamic electrons in a Corbino disk go unstable above a critical drift velocity, producing self-sustained plasma oscillations. The Corbino geometry dramatically enhances the Dyakonov-Shur instability, making it a promising terahertz source—we work this out analytically and confirm it with full Navier-Stokes simulations.</p>
                     <p class="project-meta">

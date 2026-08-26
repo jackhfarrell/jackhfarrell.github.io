@@ -9,31 +9,31 @@
     <link rel="canonical" href="https://jackhfarrell.com/talks/">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/styles.css">
-    <script src="https://kit.fontawesome.com/00cc8e5e28.js" crossorigin="anonymous"></script>
-    <script src="/script.js" type="text/javascript"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Recursive:wght@300..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://kit.fontawesome.com/00cc8e5e28.js" crossorigin="anonymous" defer></script>
+    <script src="/script.js" defer></script>
 </head>
 
 
 <body>
-    <nav class="topnav" id="topNav">
+    <nav class="topnav" id="primary-navigation" aria-label="Primary">
         <a href="/" class="title">Jack Farrell's Personal Website</a>
-        <a href="/"><i class="fa-solid fa-home fa-fw"></i> home</a> 
+        <a href="/"><i class="fa-solid fa-home fa-fw"></i> home</a>
         <a href="/research/"><i class="fa-solid fa-book fa-fw"></i> research</a>
         <a href="/teaching/"><i class="fa-solid fa-graduation-cap fa-fw"></i> teaching</a>
-        <a class="final-link active" href="/talks/"><i class="fa-solid fa-microphone fa-fw"></i> talks</a>
-        <a href="javascript:void(0);" class="icon" onclick="menuButton()">
+        <a class="final-link active" href="/talks/" aria-current="page"><i class="fa-solid fa-microphone fa-fw"></i> talks</a>
+        <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars fa-fw"></i>
-        </a>
+        </button>
     </nav>
     <header>
         <h1>Talks</h1>
     </header>
     <main>
-        <section style="margin-bottom: 64px;">
+        <section class="talk-section">
             <h2>Invited</h2>
             <hr class="section-divider">
             <ul class="talk-list">
@@ -57,7 +57,7 @@
                 </li>
             </ul>
         </section>
-        <section style="margin-bottom: 64px;">
+        <section class="talk-section">
             <h2>Contributed</h2>
             <hr class="section-divider">
             <ul class="talk-list">
@@ -69,17 +69,17 @@
                             <a href="https://youtu.be/n0ePCLju61I" target="_blank" rel="noopener noreferrer" title="YouTube Video">
                                 <i class="fa-brands fa-youtube fa-fw"></i> video
                             </a>
-                            <div class="talk-video" style="margin-top:8px;">
-                                <iframe width="320" height="180" src="https://www.youtube.com/embed/n0ePCLju61I" title="2D electron transport in complex device geometries talk video" frameborder="0" allowfullscreen></iframe>
+                            <div class="talk-video">
+                                <iframe width="320" height="180" src="https://www.youtube.com/embed/n0ePCLju61I" title="2D electron transport in complex device geometries talk video" loading="lazy" allowfullscreen></iframe>
                             </div>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <em>2D electron transport in complex device geometries</em>, APS Global Physics Summit (2026).
-                            <ul>
-                                <li><a href="/talks/aps%202026/aps%202026.pdf" target="_blank" rel="noopener noreferrer" title="Slides"><i class="fa-solid fa-file-pdf fa-fw"></i> slides pdf</a></li>
-                            </ul>
+                    <ul>
+                        <li><a href="/talks/aps%202026/aps%202026.pdf" target="_blank" rel="noopener noreferrer" title="Slides"><i class="fa-solid fa-file-pdf fa-fw"></i> slides pdf</a></li>
+                    </ul>
                 </li>
                 <li>
                     <em>Endpoint of a ballistic Dyakonov-Shur instability</em>, APS Global Physics Summit (2025).
@@ -109,8 +109,8 @@
                             <a href="https://youtu.be/2ESzYjX_Q_A" target="_blank" rel="noopener noreferrer" title="YouTube Video">
                                 <i class="fa-brands fa-youtube fa-fw"></i> video
                             </a>
-                            <div class="talk-video" style="margin-top:8px;">
-                                <iframe width="320" height="180" src="https://www.youtube.com/embed/2ESzYjX_Q_A" title="Constant density flocking talk video" frameborder="0" allowfullscreen></iframe>
+                            <div class="talk-video">
+                                <iframe width="320" height="180" src="https://www.youtube.com/embed/2ESzYjX_Q_A" title="Constant density flocking talk video" loading="lazy" allowfullscreen></iframe>
                             </div>
                         </li>
                     </ul>
