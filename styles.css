@@ -8,8 +8,9 @@
 }
 
 html {
-  /* Slightly smaller type throughout, retaining the existing proportions. */
-  font-size: 93.75%;
+  /* One fluid type scale: readable on phones, compact on desktop.
+     With the browser default, this ranges smoothly from 16px to 14px. */
+  font-size: clamp(87.5%, calc(106.25% - 0.3125vw), 100%);
   overflow-y: scroll;
 }
 
