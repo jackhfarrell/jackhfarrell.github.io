@@ -201,6 +201,11 @@ a:hover {
   border-radius: 5px;
 }
 
+.project-image--90 img {
+  width: 90%;
+  margin-inline: auto;
+}
+
 .project-image--75 img {
   width: 75%;
   margin-inline: auto;
